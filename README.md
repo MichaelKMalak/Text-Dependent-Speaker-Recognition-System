@@ -3,7 +3,20 @@ This repository is a MATLAB code of a simple text-dependent speaker-recognition 
 1. LPCs averaging
 2. MFCC
 
-The code is written by Michael Malak, Ziad Mansour, and Karim Rashidy. It is important to mention that the MFCC code is cloned from [Mike Brook's Voicebox github repository](https://github.com/ImperialCollegeLondon/sap-voicebox). We recommend reading [his documentation](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
+The code is written by Michael Malak, Ziad Mansour, and Karim Rashidy. It is important to mention that the MFCC code is cloned from [Mike Brook's Voicebox github repository](https://github.com/ImperialCollegeLondon/sap-voicebox) which are made available under the terms of the GNU Public License as mentioned in [his documentation](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). The cloned files are the following: 
+* `disteusq.m`
+* `enframe.m`	
+* `frq2mel.m`
+* `kmeanlbg.m`	
+* `kmeans.m`
+* `mel2frq.m`	
+* `melbankm.m`	
+* `melcepst.m`	
+* `rdct.m`	
+* `rfft.m`	
+* `rnsubset.m`	
+* `voicebox.m`
+* `winenvar.m`
 
 ## Introduction and Objective
 Speaker recognition aims to identify the person who is making a speech or talking by the use of certain tools and processes. A summary of a typical speaker/speech recognition system is based on four functional stages of processing. The four stages are mainly data acquisition, feature extraction, data modeling and finally the decision based on the previous stages. Meanwhile, speaker verification is the idea of accepting or rejecting a certain identity. In fact, when an unknown voice is being checked/processed, the system compares the features of this identity with the already saved models and tries to find a match for it. This process, however, needs a huge and rich training data set in order to be able to correctly model the characteristics of the speaker’s voice and to be able to cover the phonetic space as much as possible.
