@@ -1,5 +1,6 @@
 # Text-Dependent-Speaker-Recognition-System
-This repository is a MATLAB code of a simple text-dependent speaker-recognition system. The team implemented two approaches:
+[![GitHub license](https://img.shields.io/github/license/MichaelKMalak/Text-Dependent-Speaker-Recognition-System.svg)](https://github.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/blob/master/LICENSE)
+<br>This repository is a MATLAB code of a simple text-dependent speaker-recognition system. The team implemented two approaches:
 1. LPCs averaging
 2. MFCC
 
