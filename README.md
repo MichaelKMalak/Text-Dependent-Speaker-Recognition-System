@@ -10,15 +10,14 @@ Speaker recognition aims to identify the person who is making a speech or talkin
 
 ## Different Methods Implemented
 
-### 1. Linear Predictive Coefficients (LPC):
-As implemented at `Main_Phase1.m`
-
+### 1. Linear Predictive Coefficients (LPC)
 #### 1.1. Introduction
 LPC is a tool used mostly in audio signal processing and speech processing for representing the spectral envelope of a digital signal of speech in compressed form, using the information of a linear predictive model. It is one of the most powerful speech analysis techniques, and one of the most useful methods for encoding good quality speech at a low bit rate and provides extremely accurate estimates of speech parameters.
 
 The advantages of this technique is the ease of construction and the low complexity of the code. In fact, it might take very small time to train and test the samples and have somehow a valid outcome. But on the other hand, the performance compared to other techniques might be low.
 
 #### 1.2. Training
+Implemented at `Main_Phase1.m`.
 The FRAME_LENGTH parameter is chosen to be 20ms as required. The each .wav file is framed using the functions previously done in the labs, and the energy and the zero-crossings rate is measured which will enable us to get the start and end point of the signal to work with at the end. Here is a block diagram for what generally happens in the LPC method.
 
 ![LPC Training Process](https://raw.githubusercontent.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/master/src/others/LPC%20train.PNG)
@@ -28,9 +27,11 @@ The training is done on [several audio samples](https://github.com/MichaelKMalak
 A speaker model contains the average LPCs. Each column represents only one speaker. For instance, in the screenshots below, there are 10 speakers and 15 LPCs.
 
 #### 1.3. Testing
+Implemented at `Main_Phase1.m`.
 The test is done in a similar way to the training on [different audio samples than of the training](https://github.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/tree/master/src/testingData). After finishing those steps, Euclidean distance rule is applied. The Euclidean distance is applied to all the LPCs to all the speakers, and then observing the minimum one. The minimum distance corresponds to the identified speaker which is then represented in the confusion matrix to find the accuracy percentage in the end.
 
-### 2. Mel Frequency Cepstral Coefficients (MFCC):
+### 2. Mel Frequency Cepstral Coefficients (MFCC)
+#### 2.1. Introduction
 In sound processing, the Mel-frequency Cepstrum (MFC) is a representation of the shortterm power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear Mel scale of frequency.
 
 Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-aspectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response more closely than the linearly-spaced frequency bands used in the normal cepstrum. This frequency warping can allow for better representation of sound.
@@ -39,8 +40,11 @@ Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively m
 
 This technique is rather complex but more accurate. Overall, this performance has higher complexity than that of the LPC, but when comparing the ones of the codebook-number 16 with that of 32 it is less complex. So we need to take into considerations the trade-offs before implementing the technique.
 
+#### 2.2. Training
+Implemented at `Main_Phase2_Train.m`.
 
-![Speaker Model Matrix](https://raw.githubusercontent.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/master/src/others/SpeakerModel.PNG)
+#### 2.3. Testing
+Implemented at  `Main_Phase2_Test.m`.
 
 ## Conclusion
 To conclude our work, both solutions proposed are of a good performance. However, higher performance of the 32 codebook-number meant that whenever the codebook-number increases the performance increases, however, the complexity also increases.
@@ -51,3 +55,6 @@ For sure, we will never reach a performance as a human ear and there will always
 performance with moderate complexity can do the job.
 
 In addition, LPC gives us a very good model of the vocal tract and is useful in various speech analysis techniques, but MFCC as mentioned is the most commonly used technique, and with MEL filters which tries to model the human auditory system. So as a final conclusion, the performance in case of VQ using MFCC is higher than LPC.
+
+## Screenshots
+![Speaker Model Matrix](https://raw.githubusercontent.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/master/src/others/SpeakerModel.PNG)
