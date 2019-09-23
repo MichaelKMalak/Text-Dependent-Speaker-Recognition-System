@@ -32,13 +32,13 @@ The advantages of this technique is the ease of construction and the low complex
 
 #### 1.2. Training
 Implemented in `Main_Phase1.m`.
-The FRAME_LENGTH parameter is chosen to be 20ms as required. The each .wav file is framed using the functions previously done in the labs, and the energy and the zero-crossings rate is measured which will enable us to get the start and end point of the signal to work with at the end. Here is a block diagram for what generally happens in the LPC method.
+The FRAME_LENGTH parameter is chosen to be 20ms as it best fits our audio recordings. Each .wav file is framed using the functions previously written in our course labs, and the energy and the zero-crossings rate is measured to enable us to get the start and end point of each audiofile. Here is a block diagram for what generally happens in the LPC method.
 
 ![LPC Training Process](https://raw.githubusercontent.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/master/src/others/LPC%20train.PNG)
 
-The training is done on [several audio samples](https://github.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/tree/master/src/trainingData), the LPCs are calculated for each sample and at the end we calculate the average of this matrix to get the final LPC parameters for this speaker. 
+The training is done on [several audio samples](https://github.com/MichaelKMalak/Text-Dependent-Speaker-Recognition-System/tree/master/src/trainingData), and the LPCs are calculated for each sample and at the end, we calculate the average of this matrix to get the final LPC parameters for every speaker. 
 
-A speaker model contains the average LPCs. Each column represents only one speaker. For instance, in the screenshots below, there are 10 speakers and 15 LPCs.
+A speaker model at the end is a matrix containing the average LPCs of all the speakers. Each column represents only one speaker. For instance, in the screenshots below, there are 10 speakers and 15 LPCs.
 
 #### 1.3. Testing
 Implemented in `Main_Phase1.m`.
