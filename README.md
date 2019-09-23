@@ -4,7 +4,7 @@
 1. LPCs averaging
 2. MFCC
 
-The code is written by Michael Malak, Ziad Mansour, and Karim Rashidy. It is important to mention that the MFCC code is cloned from [Mike Brook's Voicebox github repository](https://github.com/ImperialCollegeLondon/sap-voicebox) which are made available under the terms of the GNU Public License as mentioned in [his documentation](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). The cloned files are the following: 
+The code is written by Michael Malak, Ziad Mansour, and Karim Rashidy. It is important to mention that the MFCC code is cloned from [Mike Brook's Voicebox github repository](https://github.com/ImperialCollegeLondon/sap-voicebox) which is made available under the terms of the GNU Public License as mentioned in [his documentation](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). The cloned files are the following: 
 * `disteusq.m`
 * `enframe.m`	
 * `frq2mel.m`
